@@ -1,0 +1,14 @@
+RewriteEngine On
+Options -indexes
+# hapus ekstensi
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?page=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?page=$1
+
+# PEMAGIILAN BERDASARKAN ID USER
+RewriteCond $1 !^(index\.php)
+RewriteRule ^skhpn/([a-zA-Z0-9_=-]+)$ index.php?page=skhpn&id=$1 [L]

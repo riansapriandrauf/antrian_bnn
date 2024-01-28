@@ -1,0 +1,20 @@
+RewriteEngine On
+Options -indexes
+# hapus ekstensi
+RewriteRule ^logout app/controller/logout.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?page=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/$ index.php?page=$1
+
+# PEMAGIILAN BERDASARKAN ID USER
+RewriteCond $1 !^(index\.php)
+
+
+RewriteRule ^del-cart/([a-zA-Z0-9_=-]+)$ del-cart.php?d=$1 [L]
+RewriteRule ^return/([a-zA-Z0-9_=-]+)$ index.php?page=return&id_pesanan=$1 [L]
+RewriteRule ^detail-pesanan/([a-zA-Z0-9_=-]+)$ index.php?page=detail-pesanan&id_pesanan=$1 [L]
+RewriteRule ^produk/([a-zA-Z0-9_=-]+)$ index.php?page=produk&produk=$1 [L]
