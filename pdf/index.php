@@ -9,6 +9,7 @@ $options = new Options();
 $options->set('chroot', realpath(''));
 $dompdf = new Dompdf($options);
 // menggunakan class dompdf
+// $dompdf = new Dompdf();
 
 ob_start();
 switch ($page) {

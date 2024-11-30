@@ -1,0 +1,4 @@
+[25-Jan-2024 14:21:58 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Call to undefined function data_pekerjaan() in /home/rdms2673/public_html/folder-joki/anggel/register.php:102
+Stack trace:
+#0 {main}
+  thrown in /home/rdms2673/public_html/folder-joki/anggel/register.php on line 102

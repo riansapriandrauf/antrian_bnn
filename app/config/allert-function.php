@@ -8,7 +8,7 @@
         });
         setTimeout(
             function() {
-                window.location = "<?= $url ?>";
+                window.location = "<?= url() ?>";
             },
             1500); // waktu tunggu atau delay
     }
@@ -21,7 +21,7 @@
         });
         setTimeout(
             function() {
-                window.location = "<?= $url ?>/login";
+                window.location = "<?= url() ?>/login";
             },
             1500); // waktu tunggu atau delay
     }

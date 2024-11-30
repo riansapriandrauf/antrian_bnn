@@ -414,23 +414,6 @@ $queris12 = $queris['page'];
         }
       });
     }
-
-    $(document).ready(function() {
-			setInterval(function() {
-				$("#list-waktu").load('');
-			}, 1000); //update setiap 1 detik
-		});
-
-    function updateNomorAntrian() {
-      $.ajax({
-        url: 'app/controller/list-waktu.php',
-        method: 'GET',
-        success: function(response) {
-          $('#nomor-antrian').html(response);
-        }
-      });
-    }
-
     updateNomorAntrian();
     setInterval(updateNomorAntrian, 1000);
   </script>

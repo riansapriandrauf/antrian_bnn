@@ -1,7 +1,7 @@
 <?php
 function url()
 {
-    return "http://localhost/joki/anggel/";
+    return "https://anggel.rdm-sultra.com/";
 }
 function encrypt($id)
 {
